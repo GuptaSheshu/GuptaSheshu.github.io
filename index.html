@@ -3,89 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Portfolio</title>
+    <title>Shashank Gupta - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div id="branding">
-                <h1><span class="highlight">Your</span> Name</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#" id="theme-toggle"><i class="fas fa-moon"></i></a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="showcase">
-        <div class="container">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Passionate Web Developer | Creative Problem Solver | Tech Enthusiast</p>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p>Hello! I'm a dedicated web developer with a passion for creating elegant and efficient solutions. With a strong foundation in both front-end and back-end technologies, I strive to build user-friendly and scalable web applications.</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-container">
-                <div class="skill-item">HTML5</div>
-                <div class="skill-item">CSS3</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">React</div>
-                <div class="skill-item">Node.js</div>
-                <div class="skill-item">Python</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-container">
-                <div class="project-item">
-                    <h3>Project 1</h3>
-                    <p>Short description of project 1</p>
+    <main>
+        <section id="intro">
+            <h1><span class="name">Shashank</span> Gupta</h1>
+            <div class="content">
+                <div class="text">
+                    <p>Hello! I am Shashank Gupta. I am currently a Research Scientist at <a href="#">Rockwell Automation</a> in Austin, TX. My research interests lie broadly in the areas of Computer Vision, Deep Learning, and Industry Automation.</p>
+                    <p>In the past, I have worked as an AI Modelling Intern at <a href="#">KLA Tencor</a> and as a Software Development Engineer at <a href="#">MathWorks Inc</a>. I have also interned at <a href="#">Uber Lab</a> in Computer Vision.</p>
+                    <p>I graduated from the <a href="#">University of Michigan, Ann Arbor</a> with a Master of Science in Computer Vision, Electrical and Computer Engineering. Prior to that, I completed my BTech in Electrical Engineering from <a href="#">Indian Institute of Technology Hyderabad, India</a>.</p>
+                    <p>Among other things, I enjoy implementing advanced machine learning models, working on challenging computer vision problems, and exploring the latest developments in AI and automation.</p>
                 </div>
-                <div class="project-item">
-                    <h3>Project 2</h3>
-                    <p>Short description of project 2</p>
-                </div>
-                <div class="project-item">
-                    <h3>Project 3</h3>
-                    <p>Short description of project 3</p>
+                <div class="image">
+                    <img src="https://via.placeholder.com/300x400" alt="Shashank Gupta">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+        <section id="contact">
+            <h2>contact</h2>
+            <div class="contact-item">
+                <h3>Professional Inquiries:</h3>
+                <p>Interested in discussing research directions or potential collaborations? Feel free to reach out via <a href="mailto:shashang@umich.edu">email</a> or connect with me on <a href="https://linkedin.com/in/shashank-gupta-hail-seshu/">LinkedIn</a>.</p>
+            </div>
+            <div class="contact-item">
+                <h3>Academic Collaborations:</h3>
+                <p>For academic collaborations or discussions about my research, please contact me through my <a href="https://github.com/GuptaSheshu">GitHub</a> profile.</p>
+            </div>
+            <div class="contact-item">
+                <h3>General Queries:</h3>
+                <p>For any other questions or if you're unsure where your query fits, feel free to reach me via email at shashang@umich.edu.</p>
+            </div>
+            <p>Looking forward to connecting with you and sharing ideas!</p>
+        </section>
+
+        <section id="news">
+            <h2>news</h2>
+            <ul>
+                <li>[July 2023] Started as a Research Scientist at Rockwell Automation, Austin, TX.</li>
+                <li>[April 2023] Graduated from the University of Michigan with a Master's degree in Computer Vision.</li>
+                <li>[September 2022] Completed AI Modelling Internship at KLA Tencor.</li>
+                <!-- Add more news items as needed -->
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Shashank Gupta. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
