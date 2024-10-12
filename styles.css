@@ -2,14 +2,18 @@
     --bg-color: #ffffff;
     --text-color: #333333;
     --link-color: #0000ff;
-    --highlight-color: #ff00ff;
+    --highlight-color: #131414de;
+    --bold-color: #080008;
+    --bg-color_experience: #cac7c7cb;
+    --bg-header-color: #035e6ede;
+    --about-main-section-color: #e3ecedde;
 }
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: var(--bg-color_experience);
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
@@ -20,11 +24,13 @@ body {
     --text-color: #ffffff;
     --link-color: #00ffff;
     --highlight-color: #ff00ff;
+    --bg-color_experience: #444343af;
+    --bold-color: #edebebeb;
 }
 
 header {
     padding: 1rem;
-    background-color: var(--bg-color);
+    background-color: var(--bg-header-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -41,7 +47,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--about-main-section-color);
 }
 
 main {
@@ -70,11 +76,21 @@ h1 {
 
 .image {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .image img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 h2 {
@@ -109,17 +125,131 @@ a:hover {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: var(--bg-color);
+    background-color: var(--bg-header-color);
     color: var(--text-color);
     border-top: 1px solid var(--text-color);
 }
 
 @media (max-width: 768px) {
     .content {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .image {
-        order: -1;
+        margin-bottom: 1rem;
     }
+
+    .image img{
+        max-width: 250px;
+    }
+}
+
+@keyframes namePop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.name {
+    font-weight: bold;
+    display: inline-block;
+    animation: namePop 2s infinite;
+}
+
+#news {
+    margin: 2rem 0;
+}
+
+.news-container {
+    max-height: 350px; /* Adjust this to show approximately 3 items */
+    overflow-y: auto;
+    /*border: 1px solid var(--text-color);*/
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-item {
+    padding: 15px;
+    background-color: var(--bg-color_experience);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.1s ease;
+}
+
+/*.news-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}*/
+
+.news-date {
+    font-weight: bold;
+    color: var(--bold-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Customize scrollbar for webkit browsers */
+.news-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.news-container::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+.news-container::-webkit-scrollbar-thumb {
+    background-color: var(--bold-color);
+    border-radius: 4px;
+}
+
+/* For Firefox */
+.news-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--highlight-color) var(--bg-color);
+}
+
+.experience-item, .publication-item {
+    background: var(--bg-color_experience);
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover, .publication-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.experience-item h2, .publication-item h2 {
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+    margin-top:0.1rem;
+}
+
+.date, .authors, .conference {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.paper-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    background-color: var(--highlight-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.paper-link:hover {
+    background-color: var(--link-color);
 }

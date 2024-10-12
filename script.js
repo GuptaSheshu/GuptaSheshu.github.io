@@ -34,3 +34,38 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
+
+// Add this to your existing JavaScript file
+
+
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     // Existing code remains here
+
+//     // News slider functionality
+//     const newsSlider = document.querySelector('.news-slider');
+//     const newsItems = newsSlider.querySelectorAll('.news-item');
+//     const prevButton = document.getElementById('prevNews');
+//     const nextButton = document.getElementById('nextNews');
+//     let currentIndex = 0;
+
+//     function showNews(index) {
+//         newsItems.forEach((item, i) => {
+//             item.style.transform = `translateY(${100 * (i - index)}%)`;
+//         });
+//     }
+
+//     prevButton.addEventListener('click', () => {
+//         currentIndex = (currentIndex - 1 + newsItems.length) % newsItems.length;
+//         showNews(currentIndex);
+//     });
+
+//     nextButton.addEventListener('click', () => {
+//         currentIndex = (currentIndex + 1) % newsItems.length;
+//         showNews(currentIndex);
+//     });
+
+//     // Initialize the slider
+//     showNews(currentIndex);
+// });
+
+// Rest of your JavaScript remains the same
